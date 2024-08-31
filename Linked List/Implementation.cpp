@@ -35,6 +35,27 @@ void insertAtHead(Node* &head, int d){
 
     }
 
+// Funtion Add number at Middle 
+    void InsertAtposition(Node* &head, int position, int d){
+
+        if(position==1){
+            insertAtHead(head,d); // to add at first/start
+            return ;
+        }
+
+        Node* temp=head;
+        int count=1;
+        while(count<position-1){
+            temp=temp->next;
+            count++;
+        }
+
+         // create new node for d
+         Node* nodeToInsert=new Node(d);
+         nodeToInsert->next=temp->next;
+         temp->next = nodeToInsert;
+    }
+
     
     void print(Node* &head){
         Node* temp = head;
@@ -67,6 +88,11 @@ main(){
     insertAtHead(head,12);
     print(head);
     insertAtHead(head,13);
+    print(head);
+
+     cout<<endl;
+    cout<<" Add Element At Middle"<<endl;
+    InsertAtposition(head,1,22);
     print(head);
 
     return 0;
