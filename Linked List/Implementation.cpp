@@ -1,4 +1,4 @@
-// singly
+// single
 #include <iostream>
 using namespace std;
 
