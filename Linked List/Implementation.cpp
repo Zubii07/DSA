@@ -1,4 +1,4 @@
-// singlee
+// singly
 #include <iostream>
 using namespace std;
 
